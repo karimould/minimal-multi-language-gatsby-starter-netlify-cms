@@ -4,12 +4,11 @@
 
 **Note:** This starter is from https://github.com/netlify-templates/gatsby-starter-netlify-cms with some small changes
 
-This repo is a lightweight, minimal and clean gatsby netlify cms starter with just one component.
+This repo is a lightweight, minimal and clean gatsby netlify cms starter with just one component for multi language sites.
 It just has a Layout component with React-Helmet in it.
 Netlify CMS is configured for a blog and the index page.
 
-
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://minimal-gatsby-starter-netlify-cms.netlify.com/)**.
+This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://minimal-multi-language-gatsby-starter-netlify-cms.netlify.com/)**.
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
@@ -22,13 +21,13 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/karimould/minimal-gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/karimould/minimal-multi-language-gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
 
 ### Access Locally
 ```
-$ git clone https://github.com/karimould/clean-gatsby-starter-netlify-cms
+$ git clone https://github.com/karimould/minimal-multi-language-gatsby-starter-netlify-cms
 $ cd [REPO_NAME]
 $ yarn
 $ npm run develop
@@ -41,7 +40,7 @@ $ npm run serve
 
 ## Getting Started (Without Netlify)
 ```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/karimould/clean-gatsby-starter-netlify-cms
+$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/karimould/minimal-multi-language-gatsby-starter-netlify-cms
 $ cd [SITE_DIRECTORY_NAME]
 $ npm run build
 $ npm run serve
