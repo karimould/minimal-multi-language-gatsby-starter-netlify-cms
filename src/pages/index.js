@@ -1,18 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 const IndexPage = ({ pageContext: { locale }, ...props }) => {
   const { node: data } = props.data.homePageData.edges[0]
   const { edges: posts } = props.data.blogPosts
   return (
-    <Layout>
-      <Helmet titleTemplate="%s | Blog">
-        <title>{`${data.frontmatter.seo_title}`}</title>
-        <meta name="description" content={`${data.frontmatter.seo_desc}`} />
-      </Helmet>
+    <Layout title={data.frontmatter.seo_title} description={data.frontmatter.seo_desc} locale={locale}>
       <h1>title: {data.frontmatter.title}</h1>
       <p>Content: {data.frontmatter.text}</p>
       <p>Locale: {locale}</p>
