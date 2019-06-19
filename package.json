@@ -1,7 +1,7 @@
 {
   "name": "minimal-multi-language-gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project for multilanguages websites",
-  "version": "1.2",
+  "description": "Example Gatsby, and Netlify CMS project for multi languages websites",
+  "version": "1.2.0",
   "author": "Karim Ould Mahieddine",
   "dependencies": {
     "gatsby": "^2.9.11",
