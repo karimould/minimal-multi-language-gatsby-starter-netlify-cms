@@ -33,20 +33,18 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       //Check if pages has a template key
-      const locale = edge.node.frontmatter.locale;
-      if(edge.node.frontmatter.templateKey != null) {
-      const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-          locale,
-        },
-      })
+      const locale = edge.node.frontmatter.locale
+      if (edge.node.frontmatter.templateKey != null) {
+        const id = edge.node.id
+        createPage({
+          path: edge.node.fields.slug,
+          component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`),
+          // additional data can be passed via context
+          context: {
+            id,
+            locale,
+          },
+        })
       }
     })
   })
@@ -59,22 +57,19 @@ exports.onCreatePage = ({ page, actions }) => {
     deletePage(page)
 
     Object.keys(locales).map(lang => {
-      const localizedPath = locales[lang].default
-        ? page.path
-        : locales[lang].path + page.path
+      const localizedPath = locales[lang].default ? page.path : locales[lang].path + page.path
 
       return createPage({
         ...page,
         path: localizedPath,
         context: {
-          locale: lang
-        }
+          locale: lang,
+        },
       })
     })
     resolve()
   })
 }
-
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
