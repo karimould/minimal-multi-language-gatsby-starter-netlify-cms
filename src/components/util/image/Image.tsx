@@ -10,11 +10,13 @@ import Img from 'gatsby-image'
 
 interface Props {
   imageName: string
+  alt?: string
+  title?: string
   maxWidth?: number
   className?: string
 }
 
-const Image = ({ imageName, maxWidth = 500, className = '' }: Props) => (
+const Image = ({ imageName, maxWidth = 500, className = '', alt, title }: Props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -39,7 +41,7 @@ const Image = ({ imageName, maxWidth = 500, className = '' }: Props) => (
       }
       return (
         <div style={{ maxWidth: maxWidth }}>
-          <Img className={className} fluid={image.node.fluid} />
+          <Img alt={alt} title={title} className={className} fluid={image.node.fluid} />
         </div>
       )
     }}
