@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layouts/main/Layout'
+import Image from '../components/util/image/Image'
 import { i18n } from '../constants/i18n'
 
 interface HomepageData {
@@ -46,6 +47,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
   const { edges: posts } = props.data.blogPosts
   return (
     <Layout locale={locale}>
+      <Image alt="gatsby logo" imageName="gatsby.png" />
       <h1>title: {data.frontmatter.title}</h1>
       <p>Content: {data.frontmatter.text}</p>
       <p>Locale: {locale}</p>
